@@ -1,5 +1,9 @@
-'''
-Superdense coding protocol simulator
+#! python
+# -*- coding:utf-8 *.*
+
+"""
+Superdense coding protocol simulator.
+
 Created by Juliana Pena
 http://julianapena.com
 
@@ -9,21 +13,24 @@ http://www.opensource.org/licenses/ms-pl
 Dependencies:
 Python 2.7, 3.5
 Quantum bit simulator (qubit.py)
-'''
+"""
 
 from __future__ import print_function
 import sys
+
+from qubit import TwoQubit
+
 if sys.version_info[0] < 3:
     input = raw_input
 
-from qubit import *
 
 def superdense_coding():
-    '''The superdense coding protocol
-       This protocol will show how
-       two classical bits can be
-       stored in a single qubit'''
+    """The superdense coding protocol.
 
+    This protocol will show how
+    two classical bits can be
+    stored in a single qubit
+    """
     print("==============================================")
     print("==========Superdense coding protocol==========")
     print("==============================================")
