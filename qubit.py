@@ -7,7 +7,7 @@ Released freely under Ms-PL
 http://www.opensource.org/licenses/ms-pl
 
 Dependencies:
-Python 2.7
+Python 2.7, 3.5
 '''
 
 import math
@@ -41,7 +41,7 @@ class Qubit:
         '''Measure the qubit in the computational basis'''
         zeroprob = abs(self.zero) ** 2
         randomchoice = random.random()
-        
+
         if randomchoice < zeroprob:
             self.zero = complex(1)
             self.one  = complex(0)
@@ -61,7 +61,7 @@ class Qubit:
     def __repr__(self):
         return str(self.zero) + " |0> + " + str(self.one) + " |1>\n"
 
-    
+
 class TwoQubit:
     def __init__(self, a = 1, b = 0, c = 0, d = 0):
         '''Initialize a two-qubit entanglement'''
@@ -111,7 +111,7 @@ class TwoQubit:
         self.oneone  *= -1
 
         return self
-    
+
     def normalize(self):
         '''Normalize the two-qubit entanglement to a unit vector'''
         norm = (abs(self.zerozero) ** 2 + abs(self.zeroone) ** 2 +
@@ -128,7 +128,7 @@ class TwoQubit:
         zerooneprob  = abs(self.zeroone)  ** 2
         onezeroprob  = abs(self.onezero)  ** 2
         randomchoice = random.random()
-        
+
         if randomchoice < zerozeroprob:
             self.zerozero = complex(1)
             self.zeroone  = complex(0)
@@ -153,8 +153,8 @@ class TwoQubit:
             self.onezero  = complex(0)
             self.oneone   = complex(1)
             return (1, 1)
-        
-    
+
+
     def __repr__(self):
         comp = [self.zerozero, self.zeroone, self.onezero, self.oneone]
         comp = [i.real if i.real == i else i for i in comp]
@@ -163,17 +163,14 @@ class TwoQubit:
 
         ls = []
         if abs(self.zerozero) > 0:
-            ls += [comp[0] + " |00>"] 
+            ls += [comp[0] + " |00>"]
         if abs(self.zeroone)  > 0:
-            ls += [comp[1] + " |01>"] 
+            ls += [comp[1] + " |01>"]
         if abs(self.onezero)  > 0:
-            ls += [comp[2]  + " |10>"] 
+            ls += [comp[2]  + " |10>"]
         if abs(self.oneone)   > 0:
-            ls += [comp[3]   + " |11>"] 
+            ls += [comp[3]   + " |11>"]
 
         comp = " + ".join(ls)
-        
+
         return comp
-
-
-    
