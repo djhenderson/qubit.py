@@ -1,10 +1,10 @@
 Proyecto final TC1013.1
-Metodos Numericos y Algebra Lineal
+Métodos Numéricos y Álgebra Lineal
 Enero-Mayo 2011
 
-Juliana Pena     A01165536
-Esteban Perez    A01163982
-Ravel Dominguez  A01165537
+Juliana Peña     A01165536
+Esteban Pérez    A01163982
+Ravel Domínguez  A01165537
 Renzo Cangahuala A01164025
 
 Computo Cuántico y Superdense Coding
